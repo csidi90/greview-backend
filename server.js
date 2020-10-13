@@ -32,6 +32,10 @@ const sendMessage = (req, res) => {
 	}
 };
 
+server.get('/', (req, res) => {
+	res.send('GREVIEW API');
+});
+
 server.post('/messages', sendMessage);
 
 server.listen(port, async () => console.log(`server started on port: ${port}`));
